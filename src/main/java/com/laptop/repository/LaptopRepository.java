@@ -7,3 +7,4 @@ import com.laptop.entity.Laptop;
 public interface LaptopRepository extends JpaRepository<Laptop,Integer>{
 
 }
+ 

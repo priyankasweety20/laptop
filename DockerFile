@@ -1,0 +1,5 @@
+FROM eclipse-tumerin:17
+COPY target/laptop.jar lap.jar
+CMD ["java","-jar","lap.jar"]
+
+

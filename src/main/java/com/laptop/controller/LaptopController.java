@@ -67,13 +67,13 @@ public class LaptopController {
 			return laSer.getbrand(b);
 		}
 		
-		@GetMapping(value="/getModel/{m}")
-		public List<Laptop> getModel(@PathVariable String m) throws NullPointerException {
+		@GetMapping(value="/getModel/{m}")//null pointer excep// throws poda thevailla default eduthukum @restcontrolleradvice//
+		public List<Laptop> getModel(@PathVariable String m)  {
 			return laSer.getModel(m);
 		}
-//		@GetMapping(value="/getPrice/{p}")
-//		public List<Laptop>  getPrice(@PathVariable int p) {
-//			return laSer.getPrice(p);
-//		}
+		@GetMapping(value="/getPrice/{p}")//arithemetice excep//
+		public List<Laptop> getPrice(@PathVariable int p) {
+			return laSer.getPrice(p);
+		}
 }
 

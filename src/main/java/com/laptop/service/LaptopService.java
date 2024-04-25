@@ -63,7 +63,7 @@ public class LaptopService {
 	}
 //	***************************************
 	//globalnullpointer//
-	public List<Laptop> getModel(String m)throws NullPointerException {
+	public List<Laptop> getModel(String m) {
 		List<Laptop> alllaptop=laDao.get().stream().filter(x->x.getModel().equals(m)).collect(Collectors.toList());
 		if(alllaptop.isEmpty()) {
 			throw new NullPointerException("given model is not there");
@@ -74,15 +74,16 @@ public class LaptopService {
 	}
 //	***************************************
 //	//globalarthimetic//
-//	public List<Laptop> getPrice(int p)throws ArithemeticException {
-//		List<Laptop> alllaptop=laDao.get().stream().filter(x->x.getPrice().equals(p)).collect(Collectors.toList());
-//		if(alllaptop.isEmpty()) {
-//			throw new ArithemeticException("given price is not there");
-//		}
-//		else {
-//			return alllaptop;
-//		}
+	public List<Laptop> getPrice(int p) {
+		List<Laptop> alllaptop=laDao.get().stream().filter(y->y.getPrice()==(p)).collect(Collectors.toList());
+		if(alllaptop.isEmpty()) {
+			throw new ArithmeticException("given price is not there");
+		}
+		else {
+			return alllaptop;
+		}
 	}
+}
 	
 	
 
